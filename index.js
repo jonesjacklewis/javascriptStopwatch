@@ -3,23 +3,23 @@ var globalMilliseconds = 0;
 
 
 function zeroPadding(inp, milliseconds){
-    let strInp = inp.toString();
+    let stringInput = inp.toString();
 
     if(!milliseconds){
-        if (strInp.length == 1){
-            return "0" + strInp;
+        if (stringInput.length == 1){
+            return "0" + stringInput;
         }else{
-            return strInp;
+            return stringInput;
         }
     }
 
-    if (strInp.length == 1){
-        return "00" + strInp;
-    }else if(strInp.length == 2){
-        return "0" + strInp;
+    if (stringInput.length == 1){
+        return "00" + stringInput;
+    }else if(stringInput.length == 2){
+        return "0" + stringInput;
     }
     else{
-        return strInp;
+        return stringInput;
     }
 
   
@@ -54,7 +54,7 @@ function increaseTimer(){
 }
 
 function startTimer(){
-    interval = window.setInterval(increaseTimer, 1);
+    interval = window.setInterval(increaseTimer, 1); // runs every millisecond
 }
 
 function stopTimer(){
